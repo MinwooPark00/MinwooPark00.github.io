@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Minwoo Park</title>
+
+    <meta name="author" content="Minwoo Park">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- To add a favicon, put a favicon.ico in images/ and uncomment the line below. -->
+    <!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  </head>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+
+          <!-- ==================== Header: name, bio, links, photo ==================== -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Minwoo Park
+                </p>
+                <p>
+                  I'm a Ph.D. student at <a href="https://www.yonsei.ac.kr/en_sc/">Yonsei University</a> in Seoul, Korea, where I'm advised by <a href="https://mlcs.yonsei.ac.kr/Professor.html">Jongeun Choi</a>.
+                  I work on robot learning, with a focus on using symmetry to make robot policies more sample-efficient and reliable.
+                </p>
+                <p style="text-align:center">
+                  <a href="mailto:minwoopark@yonsei.ac.kr">Email</a> &nbsp;/&nbsp;
+                  <!-- CV hidden until data/MinwooPark-CV.pdf is added; uncomment the line below then. -->
+                  <!-- <a href="data/MinwooPark-CV.pdf">CV</a> &nbsp;/&nbsp; -->
+                  <a href="https://scholar.google.com/citations?user=HYb-zQcAAAAJ&hl=en">Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://www.linkedin.com/in/minwoopark00/">LinkedIn</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/MinwooPark00">Github</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:37%;max-width:37%">
+                <a href="images/profile.jpg"><img style="width:100%;max-width:100%;aspect-ratio: 1 / 1;object-fit: cover;object-position: 50% 20%; border-radius: 50%;" alt="profile photo" src="images/profile.jpg" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- ==================== Research ==================== -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:16px;width:100%;vertical-align:middle">
+                <h2>Research</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+
+<!-- ==================== Paper entries ====================
+     One <tr>...</tr> block per paper, newest first.
+     - Adding bgcolor="#ffffd0" to the <tr> gives a yellow highlight (currently unused).
+     - Hover effect: the static image is shown by default and the "_image" div fades in on mouse-over.
+       Each paper needs a unique id prefix (here "equisteer"): rename it in onmouseover/onmouseout,
+       in the div id, and in both function names.
+     - An always-playing video thumbnail (no hover) is used in the "perl" entry.
+     - A plain entry without hover is at the bottom of this list (commented out) - copy that instead if you prefer.
+-->
+<tr onmouseout="equisteer_stop()" onmouseover="equisteer_start()">
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <div class="one">
+      <div class="two" id='equisteer_image'>
+        <img src='images/equisteer.gif' width=100%>
+      </div>
+      <img src='images/equisteer.jpg' width=100%>
+    </div>
+    <script type="text/javascript">
+      function equisteer_start() {
+        document.getElementById('equisteer_image').style.opacity = "1";
+      }
+
+      function equisteer_stop() {
+        document.getElementById('equisteer_image').style.opacity = "0";
+      }
+      equisteer_stop()
+    </script>
+  </td>
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <a href="https://arxiv.org/abs/2512.11345">
+      <span class="papertitle">Symmetry-Aware Steering of Equivariant Diffusion Policies: Benefits and Limits</span>
+    </a>
+    <br>
+    <strong>Minwoo Park</strong>,
+    <a href="https://pranaboy72.github.io/">Junwoo Chang</a>,
+    <a href="https://mlcs.yonsei.ac.kr/Professor.html">Jongeun Choi</a>,
+    <a href="https://me.berkeley.edu/people/roberto-horowitz/">Roberto Horowitz</a>
+    <br>
+    <em>IFAC World Congress</em>, 2026
+    <br>
+    <a href="https://arxiv.org/abs/2512.11345">arXiv</a>
+    /
+    <a href="https://github.com/MinwooPark00/EquiSteer">code</a>
+    <p></p>
+    <p>
+    The diffusion process of an equivariant diffusion policy induces a group-invariant latent-noise MDP, so steering it with equivariant RL improves sample efficiency and stability, up to the limits set by symmetry breaking.
+    </p>
+  </td>
+</tr>
+
+
+<tr>
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <video width="160" muted autoplay loop playsinline>
+      <source src="images/perl.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </td>
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <a href="https://pranaboy72.github.io/perl_page/">
+      <span class="papertitle">Partially Equivariant Reinforcement Learning in Symmetry-Breaking Environments</span>
+    </a>
+    <br>
+    <a href="https://pranaboy72.github.io/">Junwoo Chang</a>,
+    <strong>Minwoo Park</strong>,
+    <a href="https://sites.google.com/berkeley.edu/joohwan-seo-page/home">Joohwan Seo</a>,
+    <a href="https://me.berkeley.edu/people/roberto-horowitz/">Roberto Horowitz</a>,
+    <a href="https://www.jmlee.kr/">Jongmin Lee</a>,
+    <a href="https://mlcs.yonsei.ac.kr/Professor.html">Jongeun Choi</a>
+    <br>
+    <em>ICLR</em>, 2026
+    <br>
+    <a href="https://pranaboy72.github.io/perl_page/">project page</a>
+    /
+    <a href="https://arxiv.org/abs/2512.00915">arXiv</a>
+    /
+    <a href="https://openreview.net/forum?id=dRDcVyobhH">OpenReview</a>
+    <p></p>
+    <p>
+    Real environments are rarely symmetric everywhere, so a partially group-invariant MDP gates between group-invariant and standard Bellman backups, keeping the benefits of equivariance where symmetry holds without spreading errors from where it breaks.
+    </p>
+  </td>
+</tr>
+
+
+<!-- Plain entry template (no hover, not highlighted). Copy, uncomment, and fill in.
+<tr>
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <img src='images/PAPER_THUMBNAIL.jpg' width="160">
+  </td>
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <a href="PAPER_URL">
+      <span class="papertitle">Paper Title</span>
+    </a>
+    <br>
+    <strong>Minwoo Park</strong>,
+    <a href="COAUTHOR_URL">Co-Author</a>
+    <br>
+    <em>Venue</em>, Year
+    <br>
+    <a href="PROJECT_PAGE_URL">project page</a>
+    /
+    <a href="ARXIV_URL">arXiv</a>
+    <p></p>
+    <p>
+    One-sentence summary of the paper.
+    </p>
+  </td>
+</tr>
+-->
+
+          </tbody></table>
+
+
+          <!-- ==================== Miscellanea (optional) ====================
+               Uncomment this block to add boxes like Teaching / Academic Service / Talks.
+          <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
+            <tr>
+              <td>
+                <h2>Miscellanea</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
+                <div class="colored-box" style="background-color: #edd892;">
+                  <h2>Teaching</h2>
+                </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:center">
+                <a href="COURSE_URL">Teaching Assistant, COURSE NAME, Semester Year</a>
+                <br>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding:16px;width:20%;vertical-align:middle">
+                <div class="colored-box" style="background-color: #c6b89e;">
+                  <h2>Academic Service</h2>
+                </div>
+              </td>
+              <td style="padding:8px;width:80%;vertical-align:center">
+                <a href="CONFERENCE_URL">Reviewer, CONFERENCE Year</a>
+                <br>
+              </td>
+            </tr>
+          </tbody></table>
+          -->
+
+
+          <!-- ==================== Footer ==================== -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:right;font-size:small;">
+                  Website template from <a href="https://jonbarron.info/">Jon Barron</a>'s <a href="https://github.com/jonbarron/jonbarron_website">source code</a>.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
